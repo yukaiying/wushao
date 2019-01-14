@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title sign
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/sign.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no")
+        script(type="text/javascript", src='/javascripts/sign.js')
+    body
+        div(class='main')
+            div(class='title')
+                span 请输入相关信息
+            form(action='/sign' method='post')
+                div(class='input-content')
+                    div
+                        input(type='text' autocomplete='off' placeholder='用户名' name='userName' required)
+                    div(class='sign_err') #{err1}
+                    div(class='sign_err') #{err2}
+                    div(class='signup1')
+                        input(type="text" autocomplete="off" placeholder="邮箱" name="mail" required maxlength="32")
+                    div(class='sign_err') #{err3}
+                    div(class='signup1')
+                        input(type="password" autocomplete="off" placeholder="登陆密码" name="passWord" required maxlength="32")
+                    div(class='sign_err') #{err4}
+                    div(class='signup1')
+                        input(type="password" autocomplete="off" placeholder="再次输入" name="repassWord" required maxlength="32")
+                    div(class='sign_err') #{err5}
+
+                div(class='signup2')
+                    button(class='enter-btn') 注册
+
+

@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title login
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/login.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum - scale = 1.0, user - scalable = no")
+        body
+            div(class='main')
+                div(class='title')
+                    span 进入你的主页
+                div(class='title-msg')
+                    span 请输入登录账户和密码
+                form(action='/login', method='post')
+                    div(class='input-content')
+                        div
+                            input(type='text', autocomplete='off', placeholder='用户名', name='userName', required)
+                        div(class='pwd')
+                            input(type='password', autocomplete='off', placeholder='密码', name='passWord', required, maxlength='32')
+                    div(class='dl')
+                        a(href='#')
+                            button(class='enter-btn') 登录
+                    div(class='err') #{err}
+                    div(class='foor')
+                        div(class='left')
+                            span
+                                a(href='#') 忘记密码？
+                        div(class='right')
+                            span
+                                a(href='sign') 注册账户
