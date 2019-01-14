@@ -1,12 +1,14 @@
 var mysql = require("mysql");
+let setting = require('../setting');
 var db = {};
 db.query = function (sql,queryArray, callback) {
     var connect = mysql.createConnection({
-        host:'localhost',
-        user: 'root',
-        password: '123456',
-        database:'test_tab',
-        port: 3306
+        host:setting.host,
+        user: setting.user,
+        password: setting.password,
+        database:setting.database,
+        port: setting.port
+
     });
     connect.connect();
     connect.query(sql, queryArray,function (err,rows) {
