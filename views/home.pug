@@ -21,9 +21,9 @@ html
         .adver
             img(src='/images/bg.png')
         .search#search
-            input(class="input", type="text", placeholder="请输入陆游景点或城市")
-            .button 搜索
-        div(id='tour')
+            input(class="input", type="text", placeholder="请输入陆游景点或城市", v-model='searchKeyWord')
+            .button(@click='search') 搜索
+        #tour
             hgroup
                 h2 热门旅游
                 h3 最新的各种旅游资讯推荐
